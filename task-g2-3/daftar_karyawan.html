@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Employees</title>
+
+    <!-- UIkit CSS -->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      html {
+        background-image: url(../assets/images/bg-01.jpg);
+        background-size: cover;
+      }
+  .Video a.btn.btn-sm.btn-info.edit {
+      /* width: 50%; */
+      /* margin-right: 10%; */
+      /* margin-left: 10%; */
+      /* float: left; */
+      font-size: 100%;
+  }
+.uk-container {
+  background-color: #cfafc9;
+  width: 75%;
+}
+
+.uk-table th {
+  background-color: wheat;
+  color: black !important;
+  font-weight: 900;
+}
+
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+p:hover {
+  white-space: normal;
+  cursor: text;
+}
+
+button.uk-button.uk-button-default {
+  width: 100%;
+  padding: 0.5em;
+  font-size: xxx-large;
+  border: none;
+}
+
+button.uk-button.uk-button-default:hover {
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+  opacity: 3;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.uk-position-relative.uk-visible-toggle.uk-light.uk-slideshow {
+  margin: 5.1em 0;
+}
+
+button#add_employee{
+  font-weight: 900;
+    text-transform: uppercase;
+    width: 100%;
+    src="./public/{{each}}"
+}
+/*# sourceMappingURL=daftar_karyawan.css.map */
+</style>
+</head>
+<body>
+    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav-primary; mode: click" >MENU</button>
+
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="uk-active"><a href="./index.html">Home</a></li>
+                <li class="uk-active"><a href="./daftar_karyawan.html">Daftar Karyawan</a></li>
+                <li class="uk-active"><a href="./daftar_divisi.html">Daftar Divisi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-container">
+      <button id="add_employee" class="btn btn-success" data-toggle="modal" data-target="#myModalAdd">Add Employee</button>
+        <div class="Video">
+      <div id="content">
+        <div class="uk-overflow-auto">
+            <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+                <thead>
+                    <tr>
+
+                        <th class="uk-table-shrink" colspan="2">Name</th>
+                        <th class="uk-table-expand">Description</th>
+                        <th class="uk-table-expand">Age</th>
+                        <th class="uk-table-expand">Division</th>
+                        <th class="uk-table-expand">Gender</th>
+                        <th class="uk-table-expand">action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                 {{#each results}}
+                    <tr>
+                      <td><img class="uk-preserve-width uk-border-circle" src="{{thumbnail}}" width="100" alt=""></td>
+                        <td class="uk-table-expand">{{name}}</td>
+                        <td class="uk-table-link">
+                            {{description}}
+                        </td>
+                        <td class="uk-table-expand">{{age}}</td>
+                        <td class="uk-table-expand">{{division}}</td>
+                        <td class="uk-table-expand">{{gender}}</td>
+                        <td class="uk-table-expand">
+                          
+
+
+          <a href="javascript:void(0);" class="btn btn-sm btn-info edit" data-id="{{ id }}" data-thumbnail="{{ thumbnail }}" data-name="{{ name }}" data-description="{{ description }}" data-age="{{ age }}" data-division="{{ division }}" data-gender="{{ gender }}">Update Data</a>
+        </div>
+        <a href="/ninja/{{ id }}"><button>Info</button></a>
+        <a href="javascript:void(0);" class="btn btn-sm btn-danger delete" data-id="{{ id}} ">Delete</a>
+  </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                    <tr>
+                        
+                        <td><img class="uk-preserve-width uk-border-circle" src="./assets/images/sakura.png" width="100" alt=""></td>
+                        <td class="uk-table-expand">Sakura Uchiha</td>
+                        <td class="uk-table-link">
+                            InfoSakura Uchiha (うちはサクラ, Uchiha Sakura, née Haruno (春野)) is a kunoichi of Konohagakure. When assigned to Team 7, Sakura quickly finds herself ill-prepared for the duties of a shinobi.</a>
+                        <td class="uk-table-link">
+                            Info23</a>
+                        </td>
+                        <td class="uk-table-expand">Jounnin</td>
+                        <td class="uk-table-expand">Female</td>
+                    </tr>                    
+                    <tr>
+                        
+                        <td><img class="uk-preserve-width uk-border-circle" src="./assets/images/sasuke.jpg" width="100" alt=""></td>
+                        <td class="uk-table-expand">Sasuke Uchiha</td>
+                        <td class="uk-table-link">
+                            InfoSasuke Uchiha (うちはサスケ, Uchiha Sasuke) is one of the last surviving members of Konohagakure's Uchiha clan and the current reincarnation of Indra.</a>
+                        </td>
+                        <td class="uk-table-expand">35</td>
+                        <td class="uk-table-expand">Jounnin</td>
+                        <td class="uk-table-expand">Male</td>
+
+                    </tr>                    
+                    <tr>
+                        
+                        <td><img class="uk-preserve-width uk-border-circle" src="./assets/images/boruto.png" width="100" alt=""></td>
+                        <td class="uk-table-expand">Boruto Uzumaki</td>
+                        <td class="uk-table-link">
+                            InfoBoruto Uzumaki (うずまきボルト, Uzumaki Boruto) is a shinobi from Konohagakure's Uzumaki Clan and a direct descendant of the Hyūga clan through his mother.</a>
+                        </td>
+                        <td class="uk-table-expand">14</td>
+                        <td class="uk-table-expand">Gennin</td>
+                        <td class="uk-table-expand">Male</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+          <!-- Modal Add video-->
+      <form action="/add_employee" method="post">
+        <div class="modal fade" id="myModalAdd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Add A New Ninja</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+             <div class="modal-body">
+  <div>
+    <h4>Let's Fight Together</h4>
+  </div>       
+               <div class="form-group">
+                   <input type="text" name="name" class="form-control" placeholder="Name of The Ninja" required>
+               </div>
+ 
+               <div class="form-group">
+                   <input type="text" name="thumbnail" class="form-control" placeholder="url image for the thumbnail" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="description" class="form-control" placeholder="insert some brief description of the ninja" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="division" class="form-control" placeholder="the ninja division of works" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="age" class="form-control" placeholder="the ninja's age" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="gender" class="form-control" placeholder="the ninja's gender" required>
+               </div>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="submit" class="btn btn-primary">Save</button>
+             </div>
+           </div>
+         </div>
+        </div>
+     </form>
+
+<!-- Modal Update Video-->
+
+   <form action="/update_employee" method="post">
+       <div class="modal fade" id="updateEmployee" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update Detail Employee</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                           <div class="form-group">
+                   <input type="text" name="name" class="name form-control" placeholder="Name of The Ninja" required>
+               </div>
+ 
+               <div class="form-group">
+                   <input type="text" name="thumbnail" class="thumbnail form-control" placeholder="url image for the thumbnail" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="description" class="description form-control" placeholder="insert some brief description of the ninja" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="division" class="division form-control" placeholder="the ninja division of works" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="age" class="age form-control" placeholder="the ninja's age" required>
+               </div>
+               <div class="form-group">
+                   <input type="text" name="gender" class="gender form-control" placeholder="the ninja's gender" required>
+               </div>
+               </div>
+            </div>
+            <div class="modal-footer">
+              <input type="hidden" name="id" class="id form-control">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+       </div>
+  </form>
+
+
+     <!-- Modal Delete Video-->
+      <form id="add-row-form" action="/delete" method="post">
+         <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                   <div class="modal-header">
+              <h5 class="modal-title" id="myModalLabel">Delete Ninja</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                   </div>
+                   <div class="modal-body">
+                      <strong>Are you sure to delete this Ninja?</strong>
+                   </div>
+                   <div class="modal-footer">
+                        <input type="hidden" name="id" class="form-control employee_tb" required>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Delete</button>
+                   </div>
+                    </div>
+            </div>
+         </div>
+     </form>
+
+<script src="/assets/js/jquery-3.3.1.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+<script>
+    $(document).ready(function(){
+            //tampilkan data ke modal untuk edit
+      $('#content').on('click','.edit',function(){
+        var name = $(this).data('name');
+        var thumbnail = $(this).data('thumbnail');
+        var description = $(this).data('description');
+        var age = $(this).data('age');
+        var gender= $(this).data('gender');
+        var division= $(this).data('division');
+        var id = $(this).data('id');
+        $('#updateEmployee').modal('show');
+        $('.name').val(name);
+        $('.thumbnail').val(thumbnail);
+        $('.description').val(description);
+        $('.age').val(age);
+        $('.gender').val(gender);
+        $('.division').val(division);
+        $('.id').val(id);
+      });
+            //tampilkan modal hapus record
+            $('#content').on('click','.delete',function(){
+        var id = $(this).data('id');
+        $('#DeleteModal').modal('show');
+        $('.employee_tb').val(id);
+      });
+ 
+    });
+</script>
+</body>
+</html>

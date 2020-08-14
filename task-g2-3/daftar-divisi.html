@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Employees</title>
+
+    <!-- UIkit CSS -->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <!--===============================================================================================-->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="./css/daftar_divisi.css">
+    <!--===============================================================================================-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--===============================================================================================-->
+</head>
+<body>
+    <button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav-primary; mode: click" >MENU</button>
+    <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+            <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                <li class="uk-active"><a href="./index.html">Home</a></li>
+                <li class="uk-active"><a href="./daftar_karyawan.html">Daftar Karyawan</a></li>
+                <li class="uk-active"><a href="./daftar_divisi.html">Daftar Divisi</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="uk-container">
+        <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow="animation: fade">
+
+            <ul class="uk-slideshow-items">
+                <li>
+                    <img src="./assets/images/Konoha_Anbu.png" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 class="uk-margin-remove">Anbu</h3>
+                        <p class="uk-margin-remove">
+                            The Anbu (暗部, English TV: Anbu Black Ops, Literally meaning: Dark Side), short for Ansatsu Senjutsu Tokushu Butai (暗殺戦術特殊部隊, Literally meaning: Special Assassination and Tactical Squad), are covert operatives of capable ninja that are dispatched by their village leader. There are apparently no true ranks within the Anbu; team leadership and hierarchy seem to be based on merit and experience. The leaders of the teams are called squad leaders (分隊長, Buntaichō), a position held in high regard.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/Genin.png" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                        <h3 class="uk-margin-remove">Genin</h3>
+                        <p class="uk-margin-remove">Genin (下忍, Literally meaning: low ninja, Meaning (Viz): junior ninja) are the lowest level of ninja and also the ones that display the most difference in power. When they become genin, ninja start to do their bit for their village's economy – being sent on missions that the village gets paid for. They are typically sent either on D-rank missions, which are almost entirely risk-free jobs of manual labour, or, rarely, on C-rank missions, which are a cut above that and begin to verge on real "ninja" work that have a very low possibility of risk to the ninja involved. When Konohagakure was short-handed on upper-level ninja because of the invasion, the village had to occasionally send genin on higher-ranked missions.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/chunin.jpg" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                        <h3 class="uk-margin-remove">Chunin</h3>
+                        <p class="uk-margin-remove">
+                            Chūnin (中忍, Literally meaning: Middle Ninja, Meaning (Viz): Journeyman Ninja) are ninja who have reached a level of maturity and ability that primarily consists of leadership skills and tactical prowess. Chūnin are typically sent on C-rank or B-rank missions. Some chūnin, such as Iruka Umino and Shino Aburame, move on to become Academy teachers.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/jonin.png" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                        <h3 class="uk-margin-remove">Jonin</h3>
+                        <p class="uk-margin-remove">
+                            Jōnin (上忍, Jōnin, Literally meaning: High Ninja, Meaning (Viz): Elite Ninja) are generally highly experienced and highly skilled shinobi who serve as military captains. Jōnin are generally able to use at least two types of elemental chakra.[1] It is not unusual for jōnin to go on missions alone. They are often sent on A-rank missions, and if experienced enough, S-rank missions as well (which are considered to be the greatest difficulty).
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="./assets/images/kage.png" alt="" uk-cover>
+                    <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                        <h3 class="uk-margin-remove">Kage</h3>
+                        <p class="uk-margin-remove">
+                            Kage (影, Literally meaning: Shadow) is a title reserved for the leader of one of the Five Great Shinobi Countries' hidden villages. They are collectively known as the Five Kage (五影, Gokage, Literally meaning: Five Shadows). A Kage oversees the activities of their village, from sending ninja on missions to making the hard decisions regarding the safety of their people. A village's Kage is generally acknowledged as its most powerful ninja. The Kage are renowned as the top shinobi of the continent.
+                        </p>
+                    </div>
+                </li>
+
+                
+            </ul>
+        
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+        
+        </div>
+    </div>
+</body>
+</html>

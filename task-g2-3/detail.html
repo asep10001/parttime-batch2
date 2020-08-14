@@ -1,0 +1,167 @@
+<html lang="en">
+ <meta charset="utf-8">
+    <title>Tampilan Detail Video</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+{{!-- css styling --}}
+<style>
+h1.Video {
+    font-size: 300%;
+    text-align: center;
+    font-family: fantasy;
+}
+.Video a.btn.btn-sm.btn-info.edit {
+    /* width: 50%; */
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+    /* float: left; */
+    font-size: 100%;
+}
+
+.Video a.btn.btn-sm.btn-danger.delete {
+    /* width: 50%; */
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+    /* float: left; */
+    font-size: 100%;
+}
+a#kembali {
+    width: 100%;
+    height: 60px;
+    /* margin-top: 20px; */
+    align-self: center;
+    /* margin-bottom: 20px; */
+    /* margin: 2% 38%; */
+    /* border: solid 2px green; */
+    /* margin-right: 41%; */
+    font-size: 3.5em;
+    background: aquamarine;
+    text-align: center;
+    border-radius: 40px;
+}
+
+#isi img {
+    width: 75%;
+    align-self: center;
+}
+
+
+div#isi {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 4%;
+    height: 100%;
+}
+
+div#content{
+  height: fit-content;
+}
+
+div#isi.card.col-sm-5 {
+    margin: 0 3% 3% 0;
+}
+
+button.btn.btn-primary {
+    padding: 15px 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#isi img {
+    width: 75%;
+    height: 75%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+button.btn.btn-primary {
+    width: auto;
+    padding: 1.5%;
+    font-size: 100%;
+}
+
+.card.col-sm-12 {
+    box-shadow: 7px 5px 8px #888888;
+    padding: 0;
+    align-self: center;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    margin: 0 0 10px;
+    font-size: 140%;
+    /* text-transform: lowercase; */
+    font-weight: bolder;
+    font-family: cursive;
+}
+
+h3 {
+    font-size: 2em;
+    font-weight: 900;
+    font-family: monospace;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    /* width: fit-content; */
+    color: brown;
+    background-color: rgb(114 191 100 / 39%);
+}
+</style>
+<body>
+<div class="container" id="content">
+      <div id="isi" class="card col-sm-12">
+        <h1 class="Video">{{results.[0].name}}</h1>
+
+        <img
+        src="{{results.[0].thumbnail}}">
+        </img>
+
+        <p>
+          <h3>
+          Description</h3>
+        
+          <h3>Division</h3>
+          <p> 
+            {{results.[0].division}}
+          </p>
+
+          <h3>Age</h3>
+          <p> 
+            {{results.[0].age}}
+          </p>
+          <h3>gender</h3>
+          <p> 
+            {{results.[0].gender}}
+          </p>
+          <p> 
+            {{results.[0].description}}
+          </p>
+        </p>
+
+
+      </div>
+      <div class="card col-sm-12">
+        <a id="kembali" href="/">Kembali</a>
+      </div>
+    </div>
+
+
+<script src="/assets/js/jquery-3.3.1.js"></script>
+<script src="/assets/js/bootstrap.js"></script>
+</body>

@@ -1,0 +1,46 @@
+html {
+  background-image: url(../assets/images/bg-01.jpg);
+  background-size: cover;
+}
+
+.uk-container {
+  background-color: #cfafc9;
+  width: 75%;
+}
+
+.uk-table th {
+  background-color: wheat;
+  color: black !important;
+  font-weight: 900;
+}
+
+p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+p:hover {
+  white-space: normal;
+  cursor: text;
+}
+
+button.uk-button.uk-button-default {
+  width: 100%;
+  padding: 0.5em;
+  font-size: xxx-large;
+  border: none;
+}
+
+button.uk-button.uk-button-default:hover {
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+  opacity: 3;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.uk-position-relative.uk-visible-toggle.uk-light.uk-slideshow {
+  margin: 5.1em 0;
+}
+/*# sourceMappingURL=daftar_karyawan.css.map */

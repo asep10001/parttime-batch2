@@ -1,0 +1,109 @@
+label, select, option, .uk-form-label {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.uk-container {
+  margin: 1em 3em !important;
+  padding: 3em !important;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px;
+          box-shadow: 10px;
+}
+
+html {
+  background-image: url("../assets/images/bg-01.jpg");
+  background-size: cover;
+}
+
+.uk-card-default {
+  background: #fff;
+  color: #666;
+  -webkit-box-shadow: 0px 5px 20px #ffc800c2;
+          box-shadow: 0px 5px 20px #ffc800c2;
+}
+
+button {
+  border-radius: 10px;
+  width: 100%;
+}
+
+button.uk-button.uk-button-default {
+  width: 100%;
+  padding: 0.5em;
+  font-size: xxx-large;
+  border: none;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #00dbde, #fc00ff);
+  opacity: 3;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+button#facebook {
+  color: #fff;
+  background-color: #3b5998;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+button#facebook img {
+  width: 2em;
+  height: 2em;
+}
+
+button#google {
+  color: #555555;
+  background-color: #fff;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+button#submit {
+  background-color: #333333;
+  color: #fff;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 100%;
+}
+
+#form-horizontal-text, #form-horizontal-select {
+  border-radius: 10px;
+}
+
+h4 {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+}
+/*# sourceMappingURL=index.css.map */
