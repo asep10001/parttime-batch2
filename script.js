@@ -83,4 +83,10 @@ Editlah aplikasi karyawan menggunakan metode:
     - Object & array
     - localStorage
 Data karyawan harus sesuai KTP dan karyawan tidak boleh memiliki NIK yang sama
+Page terdiri dari:
+    - Input Karyawan
+    - Daftar Karyawan (Grouping berdasarkan Divisi => selectbox)
+    - Input Divisi
+    - Daftar Divisi
+    - Assignment Divisi (menu tersendiri)
 */
